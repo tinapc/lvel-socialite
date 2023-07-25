@@ -8,7 +8,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class RegisterController extends Controller
 {
-    public function __invoke($provider)
+    public function __invoke(string $provider)
     {
         $userObject = Socialite::driver($provider)->stateless()->user();
 
